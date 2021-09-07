@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div className="">
+        <div className="header-container-footer">
           <Header />
             <div className="container">
               <Switch>

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans&display=swap');
+
+:root {
+    --teagreen: #C6EBBE;
+    --feldspar: #142F29;
+    --cream: #FCFFF5;
+    /* --darkpurple: #1C0221;
+    --lanquidlavendar: #E3D3E4; */
+    --border-radius: 0.3rem;
+}
+
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+body{
+    background-color: var(--teagreen);
+}
+
+h1{
+    font-family: 'Work Sans', sans-serif;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--teagreen);
+}
+
+a:active {
+    text-decoration: none;
+}
+
+header h1{
+    color: var(--cream);
+}
+
+.navlink{
+    color: var(--cream);
+}
+
+.navlink-active{
+    color: var(--teagreen);
+}
+
+.container{
+    min-height:100%;
+    position:relative;
+    height: 100%;
+    padding: 20px;
+}
+
+.container p, .container a, .container label, .container input{
+    font-family: 'Montserrat', sans-serif;  
+}
+
+.header{
+    margin-top: 0px;
+    background-color: var(--feldspar);
+    padding-top: 20px;
+    padding-bottom: 20px;    
+    width:100%;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.site-title{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2em;
+    margin-left: 20px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links a{
+    padding-left: 7px;
+    padding-right: 7px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: large;
+}
+
+.resume{
+
+}
+
+.contact{
+
+}
+
+.portfolio{
+
+}
+
+.about{
+
+}
+
+.footer{
+    margin-bottom: 0px;
+    position: fixed;
+    left: 0;
+    bottom:0;
+    width:100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--feldspar);
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.footer-nav a{
+    font-family: 'Work Sans', sans-serif;
+    font-size: large;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer-nav img{
+    max-width: 40px;
+    height: auto;
+}

@@ -36,7 +36,7 @@ const Portfolio = () => {
     {
       title: "Portfolio (You are here!)",
       github: "https://github.com/outofthepark/react-portfolio",
-      deployment: "http://outofthepark.github.io/react-portfolio",
+      deployment: "https://nameless-oasis-74729.herokuapp.com/portfolio",
       img: "react-portfolio.png"
     }
   ]

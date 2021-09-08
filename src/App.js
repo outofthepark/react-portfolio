@@ -13,8 +13,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div className="header-container-footer">
-          <Header />
+      <Header />
             <div className="container">
               <Switch>
                 <Route exact path="/" component={About} />
@@ -25,8 +24,7 @@ function App() {
                 <Route component={NoMatch} />
               </Switch>
             </div>
-          <Footer />
-        </div>
+      <Footer />
       </Router>
     </div>
   );

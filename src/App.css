@@ -13,14 +13,20 @@ html,
 body {
     margin:0;
     padding:0;
-    height:100%;
+    height: 100%;;
 }
 
 body{
     background-color: var(--teagreen);
 }
 
-h1{
+.App{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1, h2{
     font-family: 'Work Sans', sans-serif;
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -34,7 +40,7 @@ a:visited {
     text-decoration: none;
 }
 
-a:hover {
+.header a:hover, .footer a:hover {
     color: var(--teagreen);
 }
 
@@ -54,15 +60,21 @@ header h1{
     color: var(--teagreen);
 }
 
-.container{
-    min-height:100%;
-    position:relative;
-    height: 100%;
-    padding: 20px;
+textarea, input{
+    background-color: var(--cream);
+    border-style: solid;
+    border-radius: 5px;
+    border-color: var(--feldspar)
 }
 
-.container p, .container a, .container label, .container input{
-    font-family: 'Montserrat', sans-serif;  
+.container{
+    flex: 1 0 auto;
+    margin: 50px;
+}
+
+.container p, .container a, label, input, textarea, li{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--feldspar);
 }
 
 .header{
@@ -98,31 +110,117 @@ header h1{
     font-size: large;
 }
 
-.resume{
-
+.contact-form{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--feldspar);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
-.contact{
-
+.contact-form h1, .contact-form p{
+    color: var(--cream)
 }
 
-.portfolio{
-
+.contact-form button{
+    margin-top: 20px;
+    background-color: var(--cream);
+    color: var(--feldspar);
+    padding: 10px;
+    border-style: none;
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: large;
 }
 
-.about{
+.contact-form-section{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
 
+.contact-form-section textarea, .contact-form-section input{
+    margin-top: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+.portfolio-img{
+    max-width: 100%;
+    height: auto;
+}
+
+.portfolio h1, .portfolio h2{
+    text-align: center;
+}
+
+.portfolio-links-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 100px;
+}
+
+.portfolio-link-div{
+    margin-top: 40px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--feldspar);
+    border-radius: 5px;
+}
+
+.portfolio-links{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-link{
+    color: var(--feldspar);
+    padding-right: 10px;
+}
+
+.portfolio-links a:hover{
+    color: var(--cream)
+}
+
+.aboutMeHeader{
+    text-align: center;
+  }
+  
+.aboutMeContentContainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+  
+.aboutMeContent{
+    display: flex;
+    justify-content: space-around;
+}
+  
+.myPicture{
+    max-width: 80%;
+    height: auto;
+    margin-top: 1em;
+    border-radius: 5px;
 }
 
 .footer{
-    margin-bottom: 0px;
-    position: fixed;
-    left: 0;
-    bottom:0;
-    width:100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    flex-shrink: 0;
     background-color: var(--feldspar);
+    width: 100%
 }
 
 .footer-nav{
@@ -140,5 +238,67 @@ header h1{
 
 .footer-nav img{
     max-width: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     height: auto;
+}
+
+.hamburger-menu{
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  
+    .aboutMeContentContainer{
+      display:block;
+    }
+
+    .hamburger-menu{
+        display: block;
+        max-height: 2em;
+        max-width: auto;
+        float: right;
+        margin-right: 10px;
+    }
+
+    .nav-links{
+        display: none;
+        background-color: var(--feldspar);
+        position: absolute;
+        min-width: 160px;
+        z-index: 1;
+        right: 0;
+        padding-top: 20px;
+        border-radius: 5px;
+    }
+
+    .header-nav{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .nav-links a{
+        display: block;
+        padding: 12px 16px;
+    }
+
+    .contact-form{
+        width: 80%
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-form{
+        background-color: var(--teagreen);
+    }
+
+    .contact-form h1, .contact-form p{
+        color: var(--feldspar);
+    }
+
+    .contact-form button{
+        background-color: var(--feldspar);
+        color: var(--teagreen)
+    }
 }

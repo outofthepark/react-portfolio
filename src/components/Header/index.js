@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Navigation from '../Navigation'
 
 const Header = () => {
 
@@ -20,6 +21,25 @@ const Header = () => {
       document.querySelector(".nav-links").style.display = "none"
     }
   }
+
+  const routes = [
+    {
+      title: "About Me",
+      link: "/about"
+    },
+    {
+      title: "Portfolio",
+      link: "/portfolio"
+    },
+    {
+      title: "Resume",
+      link: "/resume"
+    },
+    {
+      title: "Contact",
+      link: "/contact"
+    },
+  ];
   
   window.onresize = keepNavBarVisible;
   
@@ -28,14 +48,7 @@ const Header = () => {
         <div className="header-nav">
           <NavLink activeClassName="navlink-active" className="navlink site-title" exact={true} to="/">Allison Harden</NavLink>
           <img src="hamburger-icon.png" alt="menu" className="hamburger-menu" onClick={handleClick} />
-          <nav className="nav-links">
-                {/* I think that this would look better with a homepage, hence the commented out code. */}
-                {/* <NavLink activeClassName="navlink-active" className="navlink" exact={true} to="/">Home</NavLink> */}
-                <NavLink activeClassName="navlink-active" className="navlink" to="/about">About Me</NavLink>
-                <NavLink activeClassName="navlink-active" className="navlink" to="/portfolio">Portfolio</NavLink>
-                <NavLink activeClassName="navlink-active" className="navlink" to="/resume">Resume</NavLink>
-                <NavLink activeClassName="navlink-active" className="navlink" to="/contact">Contact</NavLink>
-          </nav>
+              <Navigation routes={routes}/>
         </div>
       </header>
     );
